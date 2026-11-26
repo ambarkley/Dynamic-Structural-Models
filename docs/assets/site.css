@@ -37,7 +37,7 @@ h1 {
   max-width: 780px;
   margin-bottom: 24px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.25rem, 5vw, 3.8rem);
+  font-size: clamp(2.125rem, 4.8vw, 3.65rem);
   font-weight: 500;
   letter-spacing: -.035em;
   line-height: 1.06;
