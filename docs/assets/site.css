@@ -1,0 +1,122 @@
+:root {
+  --ink: #172033;
+  --muted: #657083;
+  --accent: #0b5e61;
+  --accent-dark: #08494b;
+  --paper: #ffffff;
+  --notice: #fff8df;
+  --notice-line: #c99016;
+  --line: #d8dee3;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+a:focus-visible { outline: 3px solid #d3a42c; outline-offset: 3px; }
+.wrap { width: min(960px, calc(100% - 40px)); margin-inline: auto; }
+
+.site-header { padding: 52px 0 36px; border-bottom: 1px solid var(--line); }
+.event-line {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+h1, h2, h3, p { margin-top: 0; }
+h1 {
+  max-width: 780px;
+  margin-bottom: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 5vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: 1.06;
+}
+.primary-links { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-bottom: 28px; }
+.primary-links a { font-weight: 700; }
+.primary-link {
+  display: inline-block;
+  padding: 9px 14px;
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+}
+.primary-link:hover { color: #fff; background: var(--accent-dark); }
+.update-note {
+  max-width: 850px;
+  margin: 0;
+  padding: 13px 16px;
+  border-left: 4px solid var(--notice-line);
+  background: var(--notice);
+  font-size: .94rem;
+}
+
+main { padding: 42px 0 58px; }
+.before-workshop { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.before-workshop h2 { margin-bottom: 5px; font-size: 1rem; }
+.before-workshop p { max-width: 780px; margin-bottom: 0; color: var(--muted); }
+.materials-intro { display: flex; justify-content: space-between; gap: 36px; align-items: baseline; margin-bottom: 22px; }
+.materials-intro h2 {
+  margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.materials-intro p { max-width: 570px; margin-bottom: 0; color: var(--muted); font-size: .94rem; }
+.session-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.session-card { display: flex; flex-direction: column; min-height: 260px; padding: 24px; scroll-margin-top: 20px; border: 1px solid var(--line); }
+.session-card:target { border-color: var(--accent); }
+.session-number {
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.session-card h3 {
+  margin-bottom: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.session-permalink { color: inherit; text-decoration: none; }
+.session-permalink:hover { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.resource-list { margin: auto 0 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.resource-list li { display: flex; justify-content: space-between; gap: 18px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .89rem; }
+.resource-list li > span:first-child { font-weight: 700; }
+.inline-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 12px; }
+.resource-list a { font-weight: 700; }
+.unavailable { color: var(--muted); }
+.unavailable span:last-child { text-align: right; font-size: .84rem; }
+
+.site-footer { padding: 24px 0 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+.footer-row { display: flex; justify-content: space-between; gap: 18px; }
+
+@media (max-width: 720px) {
+  .wrap { width: min(100% - 28px, 960px); }
+  .site-header { padding-top: 36px; }
+  .materials-intro { display: block; }
+  .materials-intro h2 { margin-bottom: 8px; }
+  .session-grid { grid-template-columns: 1fr; }
+  .session-card { min-height: 0; }
+  .footer-row { flex-direction: column; }
+}
+
+@media (max-width: 430px) {
+  .resource-list li { display: block; }
+  .resource-list li > span:first-child { display: block; margin-bottom: 3px; }
+  .inline-links { justify-content: flex-start; }
+  .unavailable span:last-child { text-align: left; }
+}

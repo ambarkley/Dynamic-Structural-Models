@@ -1,46 +1,29 @@
-# Dynamic Structural Econometrics — Teaching Materials
+# Identification and Estimation of Dynamic Structural Models
 
-Coding workbooks on estimating dynamic structural models. Code workbooks are available in MATLAB for all topics. Code in Julia for all topics is also provided. You can also find R code for the base CCP estimation. Materials are also published as standalone HTML via GitHub Pages.
+Materials for the Econometric Society Masterclass hosted by FGV EESP in São
+Paulo, 7–10 December 2026.
 
-- **Instructor:** Aaron Barkley — <https://sites.google.com/site/aaronmbarkley>
-- **Source code & repository:** <https://github.com/ambarkley/Dynamic-Structural-Models>
-- **Rendered site (GitHub Pages):** <https://ambarkley.github.io/Dynamic-Structural-Models/>
+- **Instructors:** Robert A. Miller and Aaron Barkley
+- **Masterclass website:** <https://ambarkley.github.io/Dynamic-Structural-Models/>
+- **Event information:** <https://eesp.fgv.br/evento/masterclass-dynamic-structural-models>
 
----
+## Current materials
 
-## Workbooks
+The public teaching files are stored under `docs/materials/`, which allows the
+same files to be downloaded directly from the GitHub Pages site. Materials are
+released progressively as the masterclass proceeds.
 
-- **Bus Engine Replacement — CCP Estimation**  
-  Rust (1987) bus engine replacement as the workhorse DDC example.  
-  Conditional Choice Probability (CCP) estimator per Hotz & Miller (1993).  
-  Arcidiacono & Ellickson (2011) formulation and implementation details.  
-  Full-information MLE (à la Rust) included for comparison.
+The first publication set contains:
 
-- **Unobserved Heterogeneity — EM Algorithm**  
-  Step-by-step EM algorithm with a simple integer-data illustration.  
-  Application to DDC models following Arcidiacono & Miller (2011).  
-  
+- Continuous Choices: base MATLAB code, Live Script, HTML export, public data,
+  and lecture slides.
+- Dynamic Discrete Choice and CCP Estimation: base MATLAB code, Live Script,
+  HTML export, simulated bus data, and lecture slides.
 
-- **Dynamic Games — Entry/Exit**  
-  From single-agent DDC to multi-agent, simultaneous-move settings.  
-  Entry/exit game as the empirical IO benchmark example.  
-  Adapting single-agent estimators to fixed-point equilibria in games.
+Unreleased materials are developed and tested outside this public repository.
 
+## Previous version
 
-- **Continuous Choice — Consumption/Saving**  
-  Hansen & Singleton (1982) Euler-equation framework.  
-  Estimating utility parameters using aggregate consumption and asset returns.  
-  
-
-- **Auctions — Static & Dynamic**  
-  Estimation for first-price and second-price sealed-bid auctions.  
-  Data-limited settings (e.g., only the winning bid) and identification strategies.  
-  Extensions to dynamic ascending (English) auctions under frictionless bidding.  
-
-
----
-
-## Julia code
-
-Julia code is also available for all topics above. The Manifest and Project files are included in the repo -- activate/instantiate to use the required packages. Some of the code may slightly differ from the MATLAB versions.
-
+Materials from the previous version of the repository are preserved in
+`legacy/pre-fgv-eesp-2026/`. The former GitHub Pages site is preserved under
+`docs/legacy/pre-fgv-eesp-2026/`, and redirects remain at the old page URLs.
